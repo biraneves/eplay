@@ -9,8 +9,9 @@ const rotas = createBrowserRouter([
     path: '/',
     element: (
       <>
-        <Banner />
+        {/* <Banner /> */}
         <ProductsList title="Promoções" background="gray" />
+        <ProductsList title="Em breve" background="black" />
       </>
     ),
   },
