@@ -22,6 +22,7 @@ export const Action = styled.div`
 export const Item = styled.li`
   margin-right: 16px;
   position: relative;
+  cursor: pointer;
 
   > img {
     border: solid 2px ${cores.branco};
@@ -46,9 +47,13 @@ export const Modal = styled.div`
   width: 100%;
   height: 100%;
   z-index: 1;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+
+  &.visible {
+    display: flex;
+  }
 
   .overlay {
     position: absolute;
@@ -74,10 +79,20 @@ export const ModalContent = styled.div`
       font-size: 18px;
       font-weight: bold;
     }
+
+    img {
+      cursor: pointer;
+    }
   }
 
-  > img {
+  > img,
+  iframe {
     display: block;
+    max-width: 100%;
+  }
+
+  iframe {
     width: 100%;
+    height: 480px;
   }
 `;

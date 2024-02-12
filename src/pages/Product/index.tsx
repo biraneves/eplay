@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
 import Gallery from '../../components/Gallery';
-import hogwarts from '../../assets/images/fundo_hogwarts.png';
+import resident from '../../assets/images/resident.png';
 
 const Product = () => {
   const { id } = useParams();
@@ -38,7 +38,7 @@ const Product = () => {
           configurações do jogo.
         </p>
       </Section>
-      <Gallery name="Hogwarts Legacy" defaultCover={hogwarts} />
+      <Gallery name="Hogwarts Legacy" defaultCover={resident} />
     </>
   );
 };
