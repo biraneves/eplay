@@ -1,5 +1,10 @@
+// Components
 import ProductsList from '../../components/ProductsList';
+
+// Models
 import Game from '../../models/Game';
+
+// Assets
 import resident from '../../assets/images/resident.png';
 import diablo from '../../assets/images/diablo.png';
 import starWars from '../../assets/images/star_wars.png';

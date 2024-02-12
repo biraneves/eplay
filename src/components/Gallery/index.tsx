@@ -1,12 +1,18 @@
+// Libraries
+import { useState } from 'react';
+
+// Components
+import Section from '../Section';
+
+// Styled Components
+import { Action, Item, Items, Modal, ModalContent } from './styles';
+
+//Assets
 import hogwarts from '../../assets/images/fundo_hogwarts.png';
 import spiderman from '../../assets/images/banner-homem-aranha.png';
-import resident from '../../assets/images/resident.png';
-import Section from '../Section';
-import { Action, Item, Items, Modal, ModalContent } from './styles';
 import play from '../../assets/images/play.png';
 import zoom from '../../assets/images/zoom.png';
 import close from '../../assets/images/fechar.png';
-import { useState } from 'react';
 
 interface IGalleryItem {
   type: 'image' | 'video';

@@ -1,7 +1,12 @@
-import bannerImg from '../../assets/images/fundo_hogwarts.png';
+// Components
 import Button from '../Button';
 import Tag from '../Tag';
+
+// Styled Components
 import { Banner, Infos } from './styles';
+
+// Assets
+import bannerImg from '../../assets/images/fundo_hogwarts.png';
 
 const Hero = () => (
   <Banner style={{ backgroundImage: `url(${bannerImg})` }}>

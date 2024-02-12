@@ -1,3 +1,4 @@
+// Styled Components
 import { Container, Title } from './styles';
 
 export type Props = {

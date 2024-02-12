@@ -1,7 +1,12 @@
+// Libraries
 import { useParams } from 'react-router-dom';
+
+// Components
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
 import Gallery from '../../components/Gallery';
+
+// Assets
 import resident from '../../assets/images/resident.png';
 
 const Product = () => {

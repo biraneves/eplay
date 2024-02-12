@@ -1,9 +1,15 @@
+// Libraries
 import { BrowserRouter } from 'react-router-dom';
 
-import { GlobalCss } from './styles';
+// Components
 import Header from './components/Header';
-import Rotas from './routes';
 import Footer from './components/Footer';
+
+// Styled Components
+import { GlobalCss } from './styles';
+
+// Routes
+import Rotas from './routes';
 
 function App() {
   return (

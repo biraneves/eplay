@@ -1,7 +1,12 @@
+// Libraries
+import { Link } from 'react-router-dom';
+
+// Styled Components
 import { HeaderBar, Links, LinkItem, LinkCart } from './styles';
+
+// Assets
 import logo from '../../assets/images/logo.svg';
 import carrinho from '../../assets/images/carrinho.svg';
-import { Link } from 'react-router-dom';
 
 const Header = () => (
   <HeaderBar>

@@ -1,4 +1,7 @@
+// Components
 import Tag from '../Tag';
+
+// Styled Components
 import { Card, Descricao, Infos, Titulo } from './styles';
 
 type Props = {

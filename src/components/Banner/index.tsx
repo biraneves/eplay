@@ -1,7 +1,12 @@
-import { Imagem, Titulo, Precos } from './styles';
-import bannerImg from '../../assets/images/banner-homem-aranha.png';
+// Components
 import Tag from '../Tag';
 import Button from '../Button';
+
+// Styled Components
+import { Imagem, Titulo, Precos } from './styles';
+
+// Assets
+import bannerImg from '../../assets/images/banner-homem-aranha.png';
 
 const Banner = () => (
   <Imagem style={{ backgroundImage: `url(${bannerImg})` }}>
