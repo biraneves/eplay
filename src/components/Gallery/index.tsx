@@ -7,17 +7,15 @@ import Section from '../Section';
 // Styled Components
 import { Action, Item, Items, Modal, ModalContent } from './styles';
 
+// Interfaces
+import { IGalleryItem } from '../../pages/Home';
+
 //Assets
 import hogwarts from '../../assets/images/fundo_hogwarts.png';
 import spiderman from '../../assets/images/banner-homem-aranha.png';
 import play from '../../assets/images/play.png';
 import zoom from '../../assets/images/zoom.png';
 import close from '../../assets/images/fechar.png';
-
-interface IGalleryItem {
-  type: 'image' | 'video';
-  url: string;
-}
 
 type Props = {
   defaultCover: string;
