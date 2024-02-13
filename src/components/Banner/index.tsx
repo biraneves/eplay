@@ -9,7 +9,6 @@ import { Imagem, Titulo, Precos } from './styles';
 import { formataPreco } from '../../utils/moeda';
 
 // Assets
-import bannerImg from '../../assets/images/banner-homem-aranha.png';
 import { useEffect, useState } from 'react';
 import { Game } from '../../pages/Home';
 
@@ -40,7 +39,7 @@ const Banner = () => {
         </div>
         <Button
           type="link"
-          to="/produto"
+          to={`/product/${game.id}`}
           title="Clique para aproveitar a oferta!"
         >
           Aproveitar

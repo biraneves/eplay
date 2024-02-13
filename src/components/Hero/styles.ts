@@ -8,7 +8,7 @@ export const Banner = styled.div`
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: bottom center;
+  background-position: center center;
   position: relative;
   padding-top: 16px;
 
@@ -53,6 +53,7 @@ export const Infos = styled.div`
 
     span {
       text-decoration: line-through;
+      color: ${cores.cinzaClaro};
     }
   }
 `;
