@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { cores } from '../../styles';
+import { breakpoints, cores } from '../../styles';
 import { TagContainer } from '../Tag/styles';
 
 export const Banner = styled.div`
@@ -34,6 +34,10 @@ export const Banner = styled.div`
 
   ${TagContainer} {
     margin-right: 8px;
+  }
+
+  @media screen and (max-width: ${breakpoints.smartphone}) {
+    background-size: cover;
   }
 `;
 

@@ -13,6 +13,7 @@ export const ButtonContainer = styled.button<Props>`
   font-weight: bold;
   font-size: 16px;
   padding: 8px 16px;
+  cursor: pointer;
 `;
 
 export const ButtonLink = styled(Link)`

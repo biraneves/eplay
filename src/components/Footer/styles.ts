@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { cores } from '../../styles';
+import { breakpoints, cores } from '../../styles';
+import { HashLink } from 'react-router-hash-link';
 
 export const Container = styled.footer`
   background-color: ${cores.cinza};
@@ -20,9 +21,13 @@ export const SectionTitle = styled.h4`
 export const Links = styled.ul`
   display: flex;
   margin-top: 16px;
+
+  @media screen and (max-width: ${breakpoints.smartphone}) {
+    display: none;
+  }
 `;
 
-export const Link = styled.a`
+export const Link = styled(HashLink)`
   color: ${cores.cinzaClaro};
   text-decoration: none;
   margin-right: 8px;

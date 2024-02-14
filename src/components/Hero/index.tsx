@@ -12,33 +12,51 @@ type Props = {
 // Assets
 import { Game } from '../../pages/Home';
 import { formataPreco } from '../../utils/moeda';
+import { useDispatch } from 'react-redux';
+import { add, open } from '../../store/reducers/cart';
 
-const Hero = ({ game }: Props) => (
-  <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
-    <div className="container">
-      <div>
-        <Tag>{game.details.category}</Tag>
-        <Tag>{game.details.system}</Tag>
-      </div>
-      <Infos>
-        <h2>{game.name}</h2>
-        <p>
-          {game.prices.discount && (
-            <>
-              De <span>{formataPreco(game.prices.old)}</span>
-              <br />
-            </>
+const Hero = ({ game }: Props) => {
+  const dispatch = useDispatch();
+
+  const addToCart = () => {
+    dispatch(add(game));
+    dispatch(open());
+  };
+
+  return (
+    <Banner style={{ backgroundImage: `url(${game.media.cover})` }}>
+      <div className="container">
+        <div>
+          <Tag>{game.details.category}</Tag>
+          <Tag>{game.details.system}</Tag>
+        </div>
+        <Infos>
+          <h2>{game.name}</h2>
+          <p>
+            {game.prices.discount && (
+              <>
+                De <span>{formataPreco(game.prices.old)}</span>
+                <br />
+              </>
+            )}
+            {game.prices.current && (
+              <>Por {formataPreco(game.prices.current)}</>
+            )}
+          </p>
+          {game.prices.current && (
+            <Button
+              type="button"
+              variant="primary"
+              title="Adicionar ao carrinho"
+              onClick={addToCart}
+            >
+              Adicionar ao carrinho
+            </Button>
           )}
-          {game.prices.current && <>Por {formataPreco(game.prices.current)}</>}
-        </p>
-        {game.prices.current && (
-          <Button type="button" variant="primary" title="Adicionar ao carrinho">
-            Adicionar ao carrinho
-          </Button>
-        )}
-      </Infos>
-    </div>
-  </Banner>
-);
+        </Infos>
+      </div>
+    </Banner>
+  );
+};
 
 export default Hero;
