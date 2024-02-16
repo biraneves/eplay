@@ -6,9 +6,11 @@ import boleto from '../../assets/images/boleto.png';
 import cartao from '../../assets/images/cartao.png';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { usePurchaseMutation } from '../../services/api';
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false);
+  const [purchase, { isLoading, isError, data }] = usePurchaseMutation();
 
   const form = useFormik({
     initialValues: {
@@ -69,7 +71,39 @@ const Checkout = () => {
       ),
     }),
     onSubmit: (values) => {
-      console.log(values);
+      purchase({
+        billing: {
+          document: values.cpf,
+          email: values.email,
+          name: values.fullName,
+        },
+        delivery: {
+          email: values.deliveryEmail,
+        },
+        payment: {
+          installments: 1,
+          card: {
+            active: payWithCard,
+            code: Number(values.cardSecurityCode),
+            name: values.cardDisplayName,
+            number: values.cardNumber,
+            owner: {
+              name: values.cardOwner,
+              document: values.cpfCardOwner,
+            },
+            expires: {
+              month: Number(values.expiresMonth),
+              year: Number(values.expiresYear),
+            },
+          },
+        },
+        products: [
+          {
+            id: 1,
+            price: 10,
+          },
+        ],
+      });
     },
   });
 
