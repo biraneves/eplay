@@ -6,18 +6,18 @@ type inputGroupProps = {
 };
 
 type RowProps = {
-  marginTop?: string;
+  margintop?: string;
 };
 
 type TabButtonProps = {
-  isActive: boolean;
+  isactive: string;
 };
 
 export const Row = styled.div<RowProps>`
   display: flex;
   align-items: flex-end;
   column-gap: 24px;
-  margin-top: ${(props) => props.marginTop || '0'};
+  margin-top: ${(props) => props.margintop || '0'};
 `;
 
 export const InputGroup = styled.div<inputGroupProps>`
@@ -45,7 +45,8 @@ export const TabButton = styled.button<TabButtonProps>`
   font-size: 14px;
   font-weight: bold;
   color: ${cores.branco};
-  background-color: ${(props) => (props.isActive ? cores.verde : cores.preto)};
+  background-color: ${(props) =>
+    props.isactive === 'true' ? cores.verde : cores.preto};
   height: 32px;
   border: none;
   margin-right: 16px;
