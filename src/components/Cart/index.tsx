@@ -1,4 +1,11 @@
+// Modules
+import { useDispatch, useSelector } from 'react-redux';
+
+// Components
 import Button from '../Button';
+import Tag from '../Tag';
+
+// Styled components
 import {
   CardItem,
   CartContainer,
@@ -7,11 +14,11 @@ import {
   Quantity,
   Sidebar,
 } from './styles';
-import Tag from '../Tag';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootReducer } from '../../store';
+
+// Methods
 import { close, remove } from '../../store/reducers/cart';
 import { formataPreco } from '../../utils/moeda';
+import { RootReducer } from '../../store';
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart);

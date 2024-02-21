@@ -2,13 +2,11 @@
 import { useParams } from 'react-router-dom';
 
 // Components
+import Gallery from '../../components/Gallery';
 import Hero from '../../components/Hero';
 import Section from '../../components/Section';
-import Gallery from '../../components/Gallery';
 
-// Assets
-import { useEffect, useState } from 'react';
-import { Game } from '../Home';
+// Methods
 import { useGetGameQuery } from '../../services/api';
 
 const Product = () => {

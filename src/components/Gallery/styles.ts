@@ -23,7 +23,7 @@ export const Action = styled.div`
 
 export const Item = styled.li`
   position: relative;
-  cursor: pointer;
+  cursor: zoom-in;
 
   > img {
     border: solid 2px ${cores.branco};

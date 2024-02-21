@@ -1,9 +1,7 @@
 // Components
-import { useEffect, useState } from 'react';
 import ProductsList from '../../components/ProductsList';
 
-// Types
-import { Game } from '../Home';
+// Methods
 import {
   useGetActionGamesQuery,
   useGetFightingGamesQuery,
