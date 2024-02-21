@@ -9,7 +9,7 @@ import { Container } from '../Section/styles';
 import { Game } from '../../pages/Home';
 
 // Methods
-import { formataPreco } from '../../utils/moeda';
+import { parseToBRL } from '../../utils';
 
 export type Props = {
   title: string;
@@ -31,7 +31,7 @@ const ProductsList = ({ title, background, games, id }: Props) => {
     }
 
     if (game.prices.current) {
-      tags.push(formataPreco(game.prices.current));
+      tags.push(parseToBRL(game.prices.current));
     }
 
     return tags;

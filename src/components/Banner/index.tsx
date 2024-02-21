@@ -3,10 +3,10 @@ import Tag from '../Tag';
 import Button from '../Button';
 
 // Styled Components
-import { Imagem, Titulo, Precos } from './styles';
+import { Image, Title, Prices } from './styles';
 
 // Methods
-import { formataPreco } from '../../utils/moeda';
+import { parseToBRL } from '../../utils';
 
 // Assets
 import { useGetFeaturedGameQuery } from '../../services/api';
@@ -19,16 +19,16 @@ const Banner = () => {
   }
 
   return (
-    <Imagem style={{ backgroundImage: `url(${game.media.cover})` }}>
+    <Image style={{ backgroundImage: `url(${game.media.cover})` }}>
       <div className="container">
         <Tag size="big">Destaque do dia</Tag>
         <div>
-          <Titulo>{game.name}</Titulo>
-          <Precos>
-            De <span>{formataPreco(game.prices.old as number)}</span>
+          <Title>{game.name}</Title>
+          <Prices>
+            De <span>{parseToBRL(game.prices.old as number)}</span>
             <br />
-            por apenas {formataPreco(game.prices.current as number)}
-          </Precos>
+            por apenas {parseToBRL(game.prices.current as number)}
+          </Prices>
         </div>
         <Button
           type="link"
@@ -38,7 +38,7 @@ const Banner = () => {
           Aproveitar
         </Button>
       </div>
-    </Imagem>
+    </Image>
   );
 };
 

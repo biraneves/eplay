@@ -1,6 +1,6 @@
-export const formataPreco = (preco = 0) => {
+export const parseToBRL = (amount = 0) => {
   return new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
-  }).format(preco);
+  }).format(amount);
 };

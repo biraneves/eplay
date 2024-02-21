@@ -11,7 +11,7 @@ type Props = {
 
 // Assets
 import { Game } from '../../pages/Home';
-import { formataPreco } from '../../utils/moeda';
+import { parseToBRL } from '../../utils';
 import { useDispatch } from 'react-redux';
 import { add, open } from '../../store/reducers/cart';
 
@@ -35,12 +35,12 @@ const Hero = ({ game }: Props) => {
           <p>
             {game.prices.discount && (
               <>
-                De <span>{formataPreco(game.prices.old)}</span>
+                De <span>{parseToBRL(game.prices.old)}</span>
                 <br />
               </>
             )}
             {game.prices.current && (
-              <>Por {formataPreco(game.prices.current)}</>
+              <>Por {parseToBRL(game.prices.current)}</>
             )}
           </p>
           {game.prices.current && (

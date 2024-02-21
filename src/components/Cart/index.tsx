@@ -17,7 +17,7 @@ import {
 
 // Methods
 import { close, remove } from '../../store/reducers/cart';
-import { formataPreco } from '../../utils/moeda';
+import { parseToBRL } from '../../utils';
 import { RootReducer } from '../../store';
 
 const Cart = () => {
@@ -49,7 +49,7 @@ const Cart = () => {
                 <h3>{item.name}</h3>
                 <Tag>{item.details.category}</Tag>
                 <Tag>{item.details.system}</Tag>
-                <span>{formataPreco(item.prices.current)}</span>
+                <span>{parseToBRL(item.prices.current)}</span>
               </div>
               <button onClick={() => removeItem(item.id)} type="button" />
             </CardItem>
@@ -57,7 +57,7 @@ const Cart = () => {
         </ul>
         <Quantity>{items.length} jogo(s) no carrinho</Quantity>
         <Prices>
-          Total de {formataPreco(getTotalPrice())}{' '}
+          Total de {parseToBRL(getTotalPrice())}{' '}
           <span>em até 6x sem juros</span>
         </Prices>
         <Button title="Continuar comprando" type="button">
