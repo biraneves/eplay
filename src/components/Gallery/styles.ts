@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { cores } from '../../styles';
+import { colors } from '../../styles';
 
 export const Items = styled.ul`
   display: flex;
@@ -26,7 +26,7 @@ export const Item = styled.li`
   cursor: zoom-in;
 
   > img {
-    border: solid 2px ${cores.branco};
+    border: solid 2px ${colors.white};
     border-radius: 8px;
     width: 150px;
     height: 150px;

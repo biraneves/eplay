@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { cores } from '../../styles';
+import { colors } from '../../styles';
 import { TagContainer } from '../Tag/styles';
 import { ButtonContainer } from '../Button/styles';
 import close from '../../assets/images/fechar.png';
@@ -30,7 +30,7 @@ export const Overlay = styled.div`
 `;
 
 export const Sidebar = styled.aside`
-  background-color: ${cores.cinza};
+  background-color: ${colors.gray};
   z-index: 1;
   padding-top: 40px;
   padding-left: 16px;
@@ -47,27 +47,27 @@ export const Sidebar = styled.aside`
 export const Prices = styled.p`
   font-weight: bold;
   font-size: 14px;
-  color: ${cores.branco};
+  color: ${colors.white};
   margin-bottom: 24px;
 
   span {
     display: block;
     font-size: 12px;
-    color: ${cores.cinzaClaro};
+    color: ${colors.lightGray};
   }
 `;
 
 export const Quantity = styled.p`
   font-weight: bold;
   font-size: 16px;
-  color: ${cores.branco};
+  color: ${colors.white};
   margin-top: 32px;
   margin-bottom: 16px;
 `;
 
 export const CardItem = styled.li`
   display: flex;
-  border-bottom: solid 1px ${cores.cinzaClaro};
+  border-bottom: solid 1px ${colors.lightGray};
   padding: 8px 0;
   position: relative;
 
