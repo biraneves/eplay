@@ -39,9 +39,7 @@ const Hero = ({ game }: Props) => {
                 <br />
               </>
             )}
-            {game.prices.current && (
-              <>Por {parseToBRL(game.prices.current)}</>
-            )}
+            {game.prices.current && <>Por {parseToBRL(game.prices.current)}</>}
           </p>
           {game.prices.current && (
             <Button
