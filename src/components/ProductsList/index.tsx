@@ -6,9 +6,6 @@ import Loader from '../Loader';
 import { List } from './styles';
 import { Container } from '../Section/styles';
 
-// Types
-import { Game } from '../../pages/Home';
-
 // Methods
 import { parseToBRL } from '../../utils';
 

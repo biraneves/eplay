@@ -41,7 +41,9 @@ const Header = () => {
             <span />
           </Hamburger>
           <Link title="Início" to="/">
-            <img src={logo} alt="EPlay" />
+            <h1>
+              <img src={logo} alt="EPlay" />
+            </h1>
           </Link>
           <nav>
             <Links>
@@ -63,9 +65,9 @@ const Header = () => {
             </Links>
           </nav>
         </div>
-        <CartButton onClick={openCart}>
-          {items.length}
-          <span> - produto(s)</span> <img src={carrinho} alt="Carrinho" />
+        <CartButton role="button" onClick={openCart}>
+          <span>{items.length} produto(s)</span>{' '}
+          <img src={carrinho} alt="Carrinho" />
         </CartButton>
       </HeaderRow>
       <NavMobile className={isMenuOpen ? 'is-open' : ''}>

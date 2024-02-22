@@ -7,9 +7,6 @@ import Section from '../Section';
 // Styled Components
 import { Action, Item, Items, Modal, ModalContent } from './styles';
 
-// Interfaces
-import { IGalleryItem } from '../../pages/Home';
-
 //Assets
 import play from '../../assets/images/play.png';
 import zoom from '../../assets/images/zoom.png';
@@ -18,10 +15,10 @@ import close from '../../assets/images/fechar.png';
 type Props = {
   defaultCover: string;
   name: string;
-  items: IGalleryItem[];
+  items: GalleryItem[];
 };
 
-interface IModalState extends IGalleryItem {
+interface IModalState extends GalleryItem {
   isVisible: boolean;
 }
 
@@ -32,13 +29,13 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
     isVisible: false,
   });
 
-  const getMediaCover = (item: IGalleryItem) => {
+  const getMediaCover = (item: GalleryItem) => {
     if (item.type === 'image') return item.url;
 
     return defaultCover;
   };
 
-  const getMediaIcon = (item: IGalleryItem) => {
+  const getMediaIcon = (item: GalleryItem) => {
     if (item.type === 'image') return zoom;
 
     return play;

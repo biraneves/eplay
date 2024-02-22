@@ -10,7 +10,6 @@ type Props = {
 };
 
 // Assets
-import { Game } from '../../pages/Home';
 import { parseToBRL } from '../../utils';
 import { useDispatch } from 'react-redux';
 import { add, open } from '../../store/reducers/cart';
